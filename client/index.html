@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>BurgerTemplate</title>
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Make a Burger</h1>
+                    <div>
+                        <form onsubmit="app.burgersController.addBurger(event)">
+                            <input type="text" name="name" id="name" placeholder="Burger Name">
+                            <input type="number" name="patties" id="patties" placeholder="Patties">
+                            <input type="text" name=sauce"" id="sauce" placeholder="Sauce">
+                            <button type="submit">Make Burger</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row" id="burger-display"></div>
+        </div>
+        <div id="app"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
